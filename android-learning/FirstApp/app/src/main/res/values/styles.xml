@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme"
+        parent="Theme.AppCompat">
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">#01579B</item>
+    </style>
+
+
+    <!-- ActionBar styles -->
+</resources>

@@ -1,0 +1,32 @@
+{{#if modal.options.overlay}}
+<div class="ember-imdt-modal-overlay" {{action 'modalClose'}}>
+</div>
+{{/if}}
+<div class="ember-imdt-modal-container">
+  <div class="ember-imdt-modal-header">
+    {{#if modal.options.titleTemplate}}
+      {{modal.options.titleTemplate}}
+    {{else}}
+      <span class="ember-imdt-modal-title">
+        {{modal.options.title}}
+      </span>
+      <button type="button" name="button"  {{action 'modalClose'}}>
+        <span>
+          ×
+        </span>
+      </button>
+    {{/if}}
+  </div>
+  <div class="ember-imdt-modal-body">
+      {{#if modal.options.bodyTemplate}}
+        {{partial modal.options.bodyTemplate}}
+      {{else}}
+        {{modal.options.body}}
+      {{/if}}
+  </div>
+  <div class="ember-imdt-modal-footer">
+    {{#each modal.options.buttons as |button|}}
+      <button type="button" name="{{button.label}}" {{action button.action}}>{{button.label}}</button>
+    {{/each}}
+  </div>
+</div>

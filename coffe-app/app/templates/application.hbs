@@ -1,0 +1,39 @@
+{{#cf-side-menu currentUrl=currentUrl}}
+{{/cf-side-menu}}
+
+{{outlet}}
+
+<div class="alert-deleted">
+  Registro excluido
+</div>
+
+<script type="text/javascript">
+$('.add').click(function(){
+  $('.alert-success').stop(true, false);
+  $('.alert-success').fadeIn(1000, function(){
+    $('.alert-success').delay(1000).fadeOut(4000);
+  });
+
+  setTimeout(function(){
+    $('.even').removeClass('even');
+    $('.odd').removeClass('odd');
+    $('tr:even').addClass('even');
+    $('tr:odd').addClass('odd');
+  }, 0);
+})
+
+$('.fa-trash').click(function(){
+  $('.alert-deleted').stop(true, false);
+  $('.alert-deleted').fadeIn(1000, function(){
+    $('.alert-deleted').delay(1000).fadeOut(4000);
+  });
+
+
+  setTimeout(function(){
+    $('.even').removeClass('even');
+    $('.odd').removeClass('odd');
+    $('tr:even').addClass('even');
+    $('tr:odd').addClass('odd');
+  }, 0);
+})
+</script>

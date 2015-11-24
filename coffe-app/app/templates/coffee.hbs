@@ -1,0 +1,17 @@
+<div class="content-container">
+  <div class="content">
+    <h3>
+      <span>
+        <i class="fa fa-coffee"></i>
+      </span>
+      <span>Coffee</span>
+    </h3>
+
+    <div class="row">
+      {{#cf-grid model=model coffee=true routeName=routeName add=true}}
+      {{/cf-grid}}
+    </div>
+  </div>
+</div>
+
+{{outlet}}

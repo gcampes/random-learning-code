@@ -1,0 +1,19 @@
+<div class="content-container">
+  <div class="content">
+    <h3>
+      <span>
+        <i class="fa fa-tachometer"></i>
+      </span>
+      <span>Dashboard</span>
+    </h3>
+    
+    <div class="row clearfix">
+      {{#cf-coffee-picker sorted=sorted  createHistory='createHistory'}}{{/cf-coffee-picker}}
+    </div>
+    <div class="row">
+      {{#cf-expenses expense=expense}}{{/cf-expenses}}
+    </div>
+  </div>
+</div>
+
+{{outlet}}

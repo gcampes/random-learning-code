@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Power Coffe</string>
+
+    <string name="Quantidade">QUANTIDADE</string>
+    <string name="Preco">PREÇO</string>
+    <string name="action_settings">Settings</string>
+</resources>

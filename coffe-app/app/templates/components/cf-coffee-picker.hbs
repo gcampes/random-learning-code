@@ -1,0 +1,57 @@
+<div class="cf-coffee-picker">
+  <div class="cf-coffee-container">
+    {{#each sorted as |item|}}
+      <div class="item">
+        <div class="cover" {{action 'selectCoffee' item}}>
+          <h5>{{item.name}}</h5>
+          <h4>R$ {{item.cost}}</h4>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+  <div class="coffee-selected-container clearfix">
+    <div class="bg">
+
+    </div>
+    <div class="cover">
+
+    </div>
+    <div class="coffee-selected">
+      <div class="selected">
+        <div class="title">
+          <h5>{{selectedCoffee.name}}</h5>
+          <h4>R$ {{selectedCoffee.cost}}</h4>
+        </div>
+        <div class="thumbnail">
+          <!--  -->
+        </div>
+      </div>
+      <div class="btn confirm-drink add" {{action 'createHistory'}}>
+        Confirm
+      </div>
+      <div class="alert-success">
+        Drink registered.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.confirm-drink').click(function(){
+      $('.alert-success').stop(true, false);
+      $('.alert-success').fadeIn(1000, function(){
+        $('.alert-success').delay(1000).fadeOut(4000);
+      })
+    })
+
+    $('.cover').click(function() {
+      $('.coffee-selected-container').animate({
+        opacity: 1,
+      }, 500);
+      $('.selected-item').removeClass('selected-item');
+      $(this).addClass('selected-item');
+    });
+  });
+</script>

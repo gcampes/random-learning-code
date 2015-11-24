@@ -1,0 +1,29 @@
+<div class="content-container">
+  <div class="content">
+    <div class="new">
+      <h4>Add new User:</h4>
+
+      <div class="column">
+        <div class="form-row">
+          <label for="name">Name</label>
+        </div>
+
+        <div class="form-row">
+          {{input type=text value=desc}}
+        </div>
+        <div class="form-row clearfix">
+          <a href="#" class="btn add" {{action 'addUser' desc}}>
+            <span>
+              Save
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="alert-success">
+          User created succesfully
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

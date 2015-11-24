@@ -1,0 +1,77 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'npm@beta3.0',
+1 verbose cli   '-g',
+1 verbose cli   '-d' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of C:\Users\Gabriel\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\Gabriel\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'npm@beta3.0', null ]
+7 verbose cache add spec npm@beta3.0
+8 silly cache add parsed spec { raw: 'npm@beta3.0',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'npm',
+8 silly cache add   rawSpec: 'beta3.0',
+8 silly cache add   spec: 'beta3.0',
+8 silly cache add   type: 'tag' }
+9 silly addNamed npm@beta3.0
+10 verbose addNamed "beta3.0" is being treated as a dist-tag for npm
+11 info addNameTag [ 'npm', 'beta3.0' ]
+12 silly mapToRegistry name npm
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/npm
+16 verbose addNameTag registry:https://registry.npmjs.org/npm not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/npm
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 3:30:32 AM
+20 verbose request id dc10cfa4ae81fb73
+21 verbose etag "E3LDVTNTDBBSKSFA70X2DMESK"
+22 http request GET https://registry.npmjs.org/npm
+23 http 200 https://registry.npmjs.org/npm
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly get     etag: '"1TFH25V113D3C5474H4CTQ43A"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     'content-length': '3269773',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Mon, 21 Sep 2015 06:30:35 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     age: '30',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-jfk1024-JFK',
+24 silly get     'x-cache': 'HIT',
+24 silly get     'x-cache-hits': '1',
+24 silly get     'x-timer': 'S1442817035.328142,VS0,VE12',
+24 silly get     vary: 'Accept' } ]
+25 verbose get saving npm to C:\Users\Gabriel\AppData\Roaming\npm-cache\registry.npmjs.org\npm\.cache.json
+26 silly addNameTag next cb for npm with tag beta3.0
+27 verbose stack Error: No compatible version found: npm@'beta3.0'
+27 verbose stack Valid install targets:
+27 verbose stack ["1.1.25","1.2.32","1.3.2","1.3.4","1.2.20","1.2.21","1.2.22","1.2.23","1.2.24","1.2.25","1.2.27","1.2.28","1.2.30","1.2.31","1.3.0","1.3.1","1.2.19","1.1.70","1.1.71","1.3.5","1.3.6","1.3.7","1.3.8","1.3.9","1.3.10","1.3.11","1.3.12","1.3.13","1.3.14","1.3.15","1.3.16","1.3.17","1.3.18","1.3.20","1.3.21","1.3.22","1.3.23","1.3.24","1.3.25","1.3.26","1.4.0","1.4.1","1.4.2","1.4.3","1.4.4","1.4.5","1.4.6","1.4.7","1.4.8","1.4.9","1.4.10","1.4.11","1.4.12","1.4.13","1.4.14","1.4.15","1.4.16","1.2.8000","1.4.17","1.4.18","1.4.19","1.5.0-alpha-0","1.5.0-alpha-1","1.4.20","1.5.0-alpha-2","1.4.21","1.5.0-alpha-3","1.5.0-alpha-4","2.0.0-alpha-5","1.4.22","1.4.23","2.0.0-alpha.6.0","1.4.24","2.0.0-alpha.6","2.0.0-alpha.7","2.0.0-beta.0","1.4.25","2.0.0-beta.1","1.4.26","2.0.0-beta.2","1.4.27","2.0.0-beta.3","1.4.28","2.0.0","2.0.1","2.0.2","2.1.0","2.1.1","2.1.2","2.1.3","2.1.4","2.1.5","2.1.6","2.1.7","2.1.8","2.1.9","2.1.10","2.1.11","2.1.12","2.1.13","2.1.14","2.1.15","2.1.16","2.1.17","2.1.18","2.2.0","2.3.0","2.4.0","2.4.1","2.5.0","2.5.1","2.6.0","2.6.1","2.7.0","2.7.1","2.7.2","2.7.3","2.7.4","2.7.5","2.7.6","2.8.0","2.8.1","2.8.2","2.8.3","2.8.4","2.9.0","2.9.1","2.10.0","2.10.1","2.11.0","2.11.1","2.11.2","2.11.3","2.12.0","3.0.0","2.12.1","2.13.0","3.1.0","2.13.1","3.1.1","3.1.2","2.13.2","3.1.3","2.13.3","3.2.0","2.13.4","3.2.1","2.13.5","3.2.2","2.14.0","3.3.0","2.14.1","2.14.2","3.3.1","2.14.3","3.3.2","2.14.4","3.3.3","2.14.5","3.3.4"]
+27 verbose stack
+27 verbose stack     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:274:12)
+27 verbose stack     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:94:10)
+27 verbose stack     at RES (C:\Program Files\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+27 verbose stack     at f (C:\Program Files\nodejs\node_modules\npm\node_modules\once\once.js:17:25)
+27 verbose stack     at fixName (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:29:5)
+27 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:173:7)
+27 verbose stack     at FSReqWrap.oncomplete (fs.js:95:15)
+28 verbose cwd C:\Users\Gabriel\Google Drive\Projetos\GitRepos\helper-automacao
+29 error Windows_NT 6.3.9600
+30 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "npm@beta3.0" "-g" "-d"
+31 error node v0.12.7
+32 error npm  v2.11.3
+33 error code ETARGET
+34 error notarget No compatible version found: npm@'beta3.0'
+34 error notarget Valid install targets:
+34 error notarget ["1.1.25","1.2.32","1.3.2","1.3.4","1.2.20","1.2.21","1.2.22","1.2.23","1.2.24","1.2.25","1.2.27","1.2.28","1.2.30","1.2.31","1.3.0","1.3.1","1.2.19","1.1.70","1.1.71","1.3.5","1.3.6","1.3.7","1.3.8","1.3.9","1.3.10","1.3.11","1.3.12","1.3.13","1.3.14","1.3.15","1.3.16","1.3.17","1.3.18","1.3.20","1.3.21","1.3.22","1.3.23","1.3.24","1.3.25","1.3.26","1.4.0","1.4.1","1.4.2","1.4.3","1.4.4","1.4.5","1.4.6","1.4.7","1.4.8","1.4.9","1.4.10","1.4.11","1.4.12","1.4.13","1.4.14","1.4.15","1.4.16","1.2.8000","1.4.17","1.4.18","1.4.19","1.5.0-alpha-0","1.5.0-alpha-1","1.4.20","1.5.0-alpha-2","1.4.21","1.5.0-alpha-3","1.5.0-alpha-4","2.0.0-alpha-5","1.4.22","1.4.23","2.0.0-alpha.6.0","1.4.24","2.0.0-alpha.6","2.0.0-alpha.7","2.0.0-beta.0","1.4.25","2.0.0-beta.1","1.4.26","2.0.0-beta.2","1.4.27","2.0.0-beta.3","1.4.28","2.0.0","2.0.1","2.0.2","2.1.0","2.1.1","2.1.2","2.1.3","2.1.4","2.1.5","2.1.6","2.1.7","2.1.8","2.1.9","2.1.10","2.1.11","2.1.12","2.1.13","2.1.14","2.1.15","2.1.16","2.1.17","2.1.18","2.2.0","2.3.0","2.4.0","2.4.1","2.5.0","2.5.1","2.6.0","2.6.1","2.7.0","2.7.1","2.7.2","2.7.3","2.7.4","2.7.5","2.7.6","2.8.0","2.8.1","2.8.2","2.8.3","2.8.4","2.9.0","2.9.1","2.10.0","2.10.1","2.11.0","2.11.1","2.11.2","2.11.3","2.12.0","3.0.0","2.12.1","2.13.0","3.1.0","2.13.1","3.1.1","3.1.2","2.13.2","3.1.3","2.13.3","3.2.0","2.13.4","3.2.1","2.13.5","3.2.2","2.14.0","3.3.0","2.14.1","2.14.2","3.3.1","2.14.3","3.3.2","2.14.4","3.3.3","2.14.5","3.3.4"]
+34 error notarget
+34 error notarget This is most likely not a problem with npm itself.
+34 error notarget In most cases you or one of your dependencies are requesting
+34 error notarget a package version that doesn't exist.
+35 verbose exit [ 1, true ]

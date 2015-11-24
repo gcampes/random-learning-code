@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <title>node-clicker</title>
+  </head>
+  <body class="noselect">
+    <style media="screen">
+      body{
+        font-family: 'Raleway', sans-serif;
+        background-color: #D9D9F3;
+        text-align: center;
+        margin: 0px;
+      }
+
+      #button{
+        border: 0;
+        padding: 10px;
+        color: #ededed;
+        background-color: #3992e7;
+        width: 100px;
+        margin: 0px auto;
+        cursor: pointer;
+      }
+
+      #button:hover{
+        background-color: #066ed1;
+      }
+
+      h1, h2, h3, section, {
+        text-align: center;
+      }
+
+      h1{
+        background-color: #282046;
+        color: #ECECEC;
+        padding: 20px;
+        font-size: 70px;
+      }
+
+      h2{
+        color: #3b3b3b;
+      }
+
+      h3{
+        color: #615F5F;
+      }
+
+      .noselect {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+      }
+
+      input[type="text"]{
+        margin-top: 10px;
+        height: 30px;
+      }
+
+      input[type="text"]:focus{
+       outline: none;
+      }
+    </style>
+
+    <section id="presentation">
+      <h1>First App</h1>
+      <h3>This is my first electron App.</h3>
+    </section>
+    <section id="counter">
+      <h2 id="counter-text">Electron is Amazing.</h2>
+    </section>
+    <section>
+      <div id="button">I do Nothing.</div>
+      <input type="text" name="name" placeholder="Neither do I" id="input">
+    </section>
+
+    <script type="text/javascript">
+      document.getElementById("button").addEventListener('click', function(){
+        location.href = "./link.html";
+      })
+
+      document.getElementById("input").addEventListener('click', function(){
+        document.getElementById("input").placeholder = "Lied";
+      })
+    </script>
+  </body>
+</html>

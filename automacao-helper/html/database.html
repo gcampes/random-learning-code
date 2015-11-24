@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet/less" type="text/css" href="../css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="../css/font-awesome.min.css" />
+
+    <meta charset="utf-8">
+    <title>Automação</title>
+  </head>
+  <body id="database">
+    <section>
+      <div class="header">
+        <h3>Configurações para atualização de base</h3>
+        <a href="./index.html">
+          <div class="back">
+            <i class="fa fa-arrow-left fa-1x"></i>
+          </div>
+        </a>
+      </div>
+      <form class="formulario" action="#" method="post">
+        <input class="half-line" type="text" name="instance" value="" placeholder="Instancia SQL">
+        <input class="half-line" type="text" name="database" value="" placeholder="Base de Dados">
+        <input class="half-line" type="text" name="user" value="" placeholder="Usuário">
+        <input class="half-line" type="text" name="password" value="" placeholder="Senha">
+        <input class="full-line" type="text" name="scripts" value="" placeholder="Caminhos Script">
+        <a class="btn-save" href="#" onclick="controller.saveFile('config-database.json');">Save <i class="fa fa-floppy-o fa-lg"></i></a>
+      </form>
+    </section>
+  </body>
+
+  <script type="text/javascript">
+    require('../js/require.js');
+    var controller = require('../js/controller.js');
+
+    $(document).ready(function(){
+      var ipc = require('ipc');
+      ipc.send('asynchronous-message', 'configfile-database');
+
+      ipc.on('asynchronous-reply', function(arg) {
+        if(controller.isJsonString(arg)){
+          values = JSON.parse(arg);
+          controller.fillForm(values);
+        }
+      });
+    });
+
+  </script>
+</html>

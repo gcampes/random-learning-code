@@ -1,0 +1,1 @@
+export { default } from 'ember-imdt-modal/components/ember-imdt-modal';

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet/less" type="text/css" href="../css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="../css/font-awesome.min.css" />
+
+    <meta charset="utf-8">
+    <title>Automação</title>
+  </head>
+  <body id="index">
+    <section id="option-select">
+      <div class="button-group">
+        <a href="folder">
+          <div class="button">
+            <i class="fa fa-folder-open fa-5x"></i>
+          </div>
+        </a>
+        <a href="database">
+          <div class="button">
+            <i class="fa fa-database fa-5x"></i>
+          </div>
+        </a>
+        <a href="#">
+          <div class="button">
+            <i class="fa fa-cogs fa-5x"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+  </body>
+
+  <script type="text/javascript">
+    require('../js/require.js');
+    var controller = require('../js/controller.js');
+
+    $('a').click(function(e){
+      e.preventDefault();
+      page = $(this).attr('href');
+      controller.changePage(page);
+    })
+  </script>
+</html>

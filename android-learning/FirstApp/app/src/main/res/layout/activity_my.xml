@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="#81D4FA">
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/edit_message"
+        android:layout_marginTop="6.5dp"
+        android:background="#03A9F4"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/button_send"
+        android:onClick="sendMessage"
+        android:background="#0277BD"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</LinearLayout>

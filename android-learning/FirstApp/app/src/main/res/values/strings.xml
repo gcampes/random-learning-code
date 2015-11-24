@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Título App</string>
+
+    <string name="lorem">Lorem Ipsum Dolor Sit Amet Adiscipliscent Unit</string>
+    <string name="action_settings">Configurações</string>
+    <string name="edit_message">Inclua uma Mensagem</string>
+    <string name="button_send">Enviar</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="button_search">Button Search</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

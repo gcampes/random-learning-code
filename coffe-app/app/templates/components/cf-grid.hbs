@@ -1,0 +1,113 @@
+{{#if add}}
+<div class="row clearfix">
+  <a href="{{routeName}}/new" class="btn add">
+    <span>
+      Add {{routeName}}
+    </span>
+  </a>
+</div>
+{{/if}}
+
+<div class="table-container">
+  {{#if user}}
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Edit/Delete
+      </th>
+    </tr>
+    {{#each model as |item|}}
+    <tr>
+      <td>
+        {{item.id}}
+      </td>
+      <td>
+        {{item.name}}
+      </td>
+      <td>
+        {{#link-to 'user.update' item.id}}<i class="fa fa-pencil" title="Edit {{routeName}}"></i>{{/link-to}}
+        <i class="fa fa-trash" {{action 'delete' item}} title="Delete {{routeName}}"></i>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+
+  {{else if coffee}}
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Cost
+      </th>
+      <th>
+        Edit/Delete
+      </th>
+    </tr>
+    {{#each model as |item|}}
+    <tr>
+      <td>
+        {{item.id}}
+      </td>
+      <td>
+        {{item.name}}
+      </td>
+      <td>
+        R$ {{item.cost}}
+      </td>
+      <td>
+        {{#link-to 'coffee.update' item.id}}<i class="fa fa-pencil" title="Edit {{routeName}}"></i>{{/link-to}}
+        <i class="fa fa-trash" {{action 'delete' item}} title="Delete {{routeName}}"></i>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+
+  {{else if history}}
+  <table>
+    <tr>
+      <th>
+        Coffee
+      </th>
+      <th>
+        Cost
+      </th>
+      <th>
+        Date
+      </th>
+    </tr>
+    {{#each sorted as |item|}}
+    <tr>
+      <td>
+        {{item.coffee.name}}
+      </td>
+      <td>
+        R$ {{item.coffee.cost}}
+      </td>
+      <td>
+        {{item.date}}
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{/if}}
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.even').removeClass('even');
+    $('.odd').removeClass('odd');
+    $('tr:even').addClass('even');
+    $('tr:odd').addClass('odd');
+  });
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet/less" type="text/css" href="../css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="../css/font-awesome.min.css" />
+
+    <meta charset="utf-8">
+    <title>Automação</title>
+  </head>
+  <body id="database">
+    <section>
+      <div class="header">
+        <h3>Configurações para atualização de folder</h3>
+        <a href="./index.html">
+          <div class="back">
+            <i class="fa fa-arrow-left fa-1x"></i>
+          </div>
+        </a>
+      </div>
+      <form class="formulario" action="#" method="post">
+        <input class="full-line" type="text" name="source" value="" placeholder="Origem">
+        <input class="full-line" type="text" name="target" value="" placeholder="Destino">
+        <input class="full-line" type="text" name="backup" value="" placeholder="Backup">
+        <a class="btn-save" href="#" onclick="controller.saveFile('config-folder.json');">Save <i class="fa fa-floppy-o fa-lg"></i></a>
+      </form>
+    </section>
+  </body>
+
+  <script type="text/javascript">
+    require('../js/require.js');
+    var controller = require('../js/controller.js');
+
+    $(document).ready(function(){
+      var ipc = require('ipc');
+      ipc.send('asynchronous-message', 'configfile-folder');
+
+      ipc.on('asynchronous-reply', function(arg) {
+        if(controller.isJsonString(arg)){
+          values = JSON.parse(arg);
+          controller.fillForm(values);
+        }
+      });
+    });
+
+  </script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <title>Folder Updater</title>
+  </head>
+  <body class="noselect">
+    <style media="screen">
+      body{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        background-color: #303030;
+        font-family: "Raleway";
+        margin: 0px;
+      }
+
+      h1, h2, h3, section{
+        margin: 0px;
+        color: #d2d2d2;
+      }
+
+      h1{
+        background-color: #424242;
+        color: #ffffff;
+        padding: 5px;
+      }
+
+      h3{
+        color: #838383;
+        margin-top: 10px;
+      }
+
+      section{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      input[type="text"]{
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-family: "Arial";
+        font-weight: bold;
+        outline: none;
+      }
+
+      label{
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .btn{
+        border: 0;
+        padding: 10px;
+        color: #ededed;
+        background-color: #3992e7;
+        cursor: pointer;
+        display: inline;
+      }
+
+      .buttons{
+        margin-top: 10px;
+      }
+
+      #save{
+        background-color: #af3f01;
+      }
+
+      #update{
+        background-color: #4ca212;
+      }
+
+      .validated{
+        outline-color: #0fb42f !important;
+        outline-width:1px !important;
+        outline-style: solid !important;
+      }
+
+      .invalidated{
+        outline-color: #a80d0d !important;
+        outline-width:1px !important;
+        outline-style: solid !important;
+      }
+    </style>
+
+    <section id="presentation">
+      <h1><i class="fa fa-folder-open-o"></i> Folder Updater α</h1>
+      <h3>This is a folder updater, it was meant to serve as a developing tool for the testing team at some company</h3>
+      <p>
+        On the fields below choose the source folder, the target folder and the backup folder.
+      </p>
+    </section>
+
+    <section id="app">
+      <div class="fields">
+        <label for="source">Source Folder. ex: c:/users/name/desktop/release</label>
+        <input type="text" name="source" value="" placeholder="Source Folder" id="source">
+
+        <label for="target">Target Folder. ex: c:/www/app-local</label>
+        <input type="text" name="target" value="" placeholder="Target Folder" id="target">
+
+        <label for="backup">Backup Folder. ex: c:/users/name/desktop/backups</label>
+        <input type="text" name="backup" value="" placeholder="Backup Folder" id="backup">
+      </div>
+
+      <div class="buttons">
+        <div class="btn" id="save"><i class="fa fa-floppy-o"></i>  Save Settings</div>
+        <div class="btn" id="update"><i class="fa fa-rocket"></i>  Start Update</div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      require('./js/jquery.js') ;
+      require('./js/validator.js');
+    </script>
+  </body>
+</html>
